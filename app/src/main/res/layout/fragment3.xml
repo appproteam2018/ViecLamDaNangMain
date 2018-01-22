@@ -160,7 +160,8 @@
             android:layout_alignLeft="@+id/etJob"
             android:layout_alignStart="@+id/etCompany"
             android:layout_below="@+id/linear3"
-            android:hint="Nhập Tên Vị Trí Công Việc cần tuyển "
+            android:hint="Nhập Tên Vị Trí Công Việc Cần Tuyển "
+
             android:inputType="text"
             android:selectAllOnFocus="false"
             android:singleLine="false" />

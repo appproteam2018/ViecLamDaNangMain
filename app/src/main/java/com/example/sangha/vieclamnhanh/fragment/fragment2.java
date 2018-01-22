@@ -23,6 +23,8 @@ public class fragment2 extends android.support.v4.app.Fragment{
             return inflater.inflate(R.layout.fragment2,container,false);
 
         }
+
+
     }
 
 

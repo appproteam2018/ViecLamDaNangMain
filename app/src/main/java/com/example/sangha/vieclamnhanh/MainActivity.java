@@ -13,32 +13,39 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.sangha.vieclamnhanh.JDBC.JDBCController;
+import com.example.sangha.vieclamnhanh.JDBC.UserModel;
+
+import java.sql.SQLException;
 
 public class MainActivity  extends AppCompatActivity implements View.OnClickListener {
-    private ViewPager pager;
+    private ViewPager viewPager;
     private TabLayout tabLayout;
     Button btSubmit;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addControl();
 
+
     }
     private void addControl()
     {
-        pager = (ViewPager)findViewById(R.id.viewPager);
-        tabLayout = (TabLayout)findViewById(R.id.tabLayout);
-        FragmentManager manager = getSupportFragmentManager();
-        PagerAdapter adapter = new PagerAdapter(manager);
-        pager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(pager);
-        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.setTabsFromPagerAdapter(adapter);
-
+       viewPager = (ViewPager)findViewById(R.id.viewPager);
+       tabLayout =(TabLayout)findViewById(R.id.tabLayout);
+       FragmentManager fragmentManager = getSupportFragmentManager();
+       PagerAdapter pagerAdapter = new PagerAdapter(fragmentManager);
+       viewPager.setAdapter(pagerAdapter);
+       tabLayout.setupWithViewPager(viewPager);
+       viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+       tabLayout.setTabsFromPagerAdapter(pagerAdapter);
 
 
     }
+
 
 
     @Override

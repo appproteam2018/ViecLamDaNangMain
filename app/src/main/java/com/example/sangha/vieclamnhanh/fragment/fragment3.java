@@ -10,8 +10,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.sangha.vieclamnhanh.JDBC.UserModel;
 import com.example.sangha.vieclamnhanh.MainActivity;
 import com.example.sangha.vieclamnhanh.R;
+import com.example.sangha.vieclamnhanh.User;
+
+import java.net.URLEncoder;
+import java.sql.SQLException;
 
 /**
  * Created by SangHa on 1/16/2018.
@@ -47,6 +52,7 @@ import com.example.sangha.vieclamnhanh.R;
                     if (checkFaults(cbFullTime,cbPartTime,etCompany,etJob,etSalary,etDetails,etAddress,etPhone,etEmail)==0)
                     {
 
+
                         Toast.makeText(view.getContext(),"Bạn Nhập Thiếu Thông Tin ",Toast.LENGTH_LONG).show();
                     }
 
@@ -55,7 +61,20 @@ import com.example.sangha.vieclamnhanh.R;
 
                     {
 
+
+
+                        User infor = new User(setTime(cbFullTime,cbPartTime),etCompany.getText().toString(),etJob.getText().toString(),etDetails.getText().toString(),etAddress.getText().toString(),etSalary.getText().toString(),etPhone.getText().toString(),etEmail.getText().toString());
+                        UserModel test = new UserModel();
+
                         Toast.makeText(view.getContext(),"Bạn sẽ được duyệt và đăng ",Toast.LENGTH_LONG).show();
+                        try {
+                            if (test.Insert(infor)==true)
+                                Toast.makeText(view.getContext(),"Thêm Thành Công",Toast.LENGTH_LONG).show();
+                            else
+                                Toast.makeText(view.getContext()," Thêm Thất Bại ",Toast.LENGTH_LONG).show();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
                         resetItem(cbFullTime,cbPartTime,etCompany,etJob,etSalary,etDetails,etAddress,etPhone,etEmail);
                     }
 
@@ -95,6 +114,19 @@ import com.example.sangha.vieclamnhanh.R;
             etPhone.setText("");
             etEmail.setText("");
         }
+        private int setTime(CheckBox cbFullTime,CheckBox cbPartTime)
+        {
+            if (cbFullTime.isChecked()==false && cbPartTime.isChecked()==false)
+                return 0;
+            if (cbFullTime.isChecked()==false && cbPartTime.isChecked()==true)
+                return 1;
+            if (cbFullTime.isChecked()==true &&  cbPartTime.isChecked()==false)
+                return 2;
+            if (cbFullTime.isChecked()==true &&  cbPartTime.isChecked()==true)
+                return 3;
+            return -1;
+        }
+
 
     }
 
