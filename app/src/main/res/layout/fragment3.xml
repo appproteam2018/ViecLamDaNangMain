@@ -7,10 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
         android:paddingEnd="20dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp">
+        android:paddingStart="20dp"
+        android:paddingTop="20dp">
 
         <LinearLayout
             android:id="@+id/linear1"
@@ -92,13 +92,13 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/imageView2"
                 android:layout_weight="1"
                 android:text="Nơi Đăng"
                 android:textColor="#fc8747"
-                android:textSize="16sp"
-                android:layout_marginLeft="100dp"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@id/imageView2"/>
+                android:textSize="16sp" />
 
 
         </RelativeLayout>
@@ -141,13 +141,13 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/imageView3"
                 android:layout_weight="1"
                 android:text="Công Việc"
                 android:textColor="#fc8747"
-                android:textSize="16sp"
-                android:layout_toRightOf="@id/imageView3"
-                android:layout_marginLeft="100dp"
-                android:layout_centerInParent="true"/>
+                android:textSize="16sp" />
 
 
         </RelativeLayout>
@@ -189,13 +189,13 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="38dp"
+                android:layout_toRightOf="@id/imageView5"
                 android:layout_weight="1"
                 android:text="Yêu Cầu Và Chi Tiết Công Việc"
                 android:textColor="#fc8747"
-                android:textSize="16sp"
-                android:layout_toRightOf="@id/imageView5"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="38dp"/>
+                android:textSize="16sp" />
 
 
         </RelativeLayout>
@@ -234,17 +234,18 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/imageView5"
                 android:layout_weight="1"
                 android:text="Địa chỉ"
                 android:textColor="#fc8747"
-                android:textSize="16sp"
-                android:layout_toRightOf="@id/imageView5"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="100dp"
-                />
+                android:textSize="16sp" />
 
 
         </RelativeLayout>
+
+
         <EditText
             android:id="@+id/etAddress"
             android:layout_width="wrap_content"
@@ -255,6 +256,78 @@
             android:ems="15"
             android:hint="72 , Ngô Văn Sở, Liên Chiểu, Đà Nẵng"
             android:inputType="textMultiLine" />
+
+        <RelativeLayout
+            android:id="@+id/linearNumberPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/linear7"
+            android:layout_marginTop="40dp"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/imageViewTimePicker"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/date" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/imageView5"
+                android:layout_weight="1"
+                android:text="Thời Hạn Bài Đăng"
+                android:textColor="#fc8747"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearNumberPicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/linearNumberPicker"
+
+            android:layout_marginTop="25dp"
+            android:weightSum="2">
+
+            <NumberPicker
+                android:layout_centerHorizontal="true"
+                android:id="@+id/numberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp">
+
+            </NumberPicker>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_toRightOf="@id/numberPicker"
+                android:layout_weight="1"
+                android:layout_marginLeft="40dp"
+                android:text="Ngày"
+                android:textColor="#fc8747"
+                android:layout_centerInParent="true"
+                />
+
+
+        </RelativeLayout>
+
+
+
         <RelativeLayout
             android:id="@+id/linear4"
             android:layout_width="wrap_content"
@@ -280,12 +353,12 @@
                 android:id="@+id/etSalary"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/imageView4"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Nhập Lương (VND)"
-                android:inputType="number"
-                android:layout_toRightOf="@id/imageView4"
-                android:layout_marginLeft="20dp"/>
+                android:inputType="number" />
 
 
         </RelativeLayout>
@@ -315,12 +388,12 @@
                 android:id="@+id/etPhone"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/imageView4"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Nhập Số Điện Thoại Liên Hệ"
-                android:inputType="number"
-                android:layout_toRightOf="@id/imageView4"
-                android:layout_marginLeft="20dp"/>
+                android:inputType="number" />
 
 
         </RelativeLayout>
@@ -350,12 +423,12 @@
                 android:id="@+id/etEmail"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/imageView7"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Nhập Email Liên Hệ"
-                android:inputType="textEmailAddress"
-                android:layout_toRightOf="@id/imageView7"
-                android:layout_marginLeft="20dp"/>
+                android:inputType="textEmailAddress" />
 
 
         </RelativeLayout>
@@ -365,13 +438,13 @@
             android:id="@+id/btnSubmit"
             android:layout_width="120dp"
             android:layout_height="40dp"
+            android:layout_below="@id/linearNumberPicker2"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
             android:background="@drawable/background"
             android:text="Đăng Tin"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:layout_below="@id/linear7"
-            android:layout_marginTop="40dp"/>
+            android:textColor="#ffffff" />
 
 
     </RelativeLayout>
