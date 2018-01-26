@@ -24,7 +24,7 @@ public class UserModel {
     public boolean Insert(User infor) throws SQLException
     {
         Statement statement = connection.createStatement();
-        String sql = "insert into dang(timejob,nameperson,namejob,details,address,salary,phone,email) values ("+infor.getTimejob()+",N'"+infor.getNameperson()+"',N'"+infor.getNamejob()+"',N'"+infor.getDetails()+"',N'"+infor.getAddress()+"',N'"+infor.getSalary()+"',N'"+infor.getPhone()+"',N'"+infor.getEmail()+"')";
+        String sql = "insert into dang(timejob,nameperson,namejob,details,address,salary,phone,email,timecount,timedate) values ("+infor.getTimejob()+",N'"+infor.getNameperson()+"',N'"+infor.getNamejob()+"',N'"+infor.getDetails()+"',N'"+infor.getAddress()+"',N'"+infor.getSalary()+"',N'"+infor.getPhone()+"',N'"+infor.getEmail()+"',"+infor.getNumber()+",getdate())";
         if (statement.executeUpdate(sql) > 0) {
             connection.close();
             return true;

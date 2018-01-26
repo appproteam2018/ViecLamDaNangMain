@@ -1,14 +1,18 @@
 package com.example.sangha.vieclamnhanh;
 
+import java.util.Date;
+
 /**
  * Created by SangHa on 1/20/2018.
  */
 
 public class User {
-    public int timejob;
+    public int timejob,number;
+
+
     public String nameperson,namejob,details,address,salary,phone,email;
 
-    public User(int timejob, String nameperson, String namejob, String details, String address, String salary, String phone, String email) {
+    public User(int timejob, String nameperson, String namejob, String details, String address, String salary, String phone, String email,int number) {
         this.timejob = timejob;
         this.nameperson = nameperson;
         this.namejob = namejob;
@@ -17,6 +21,8 @@ public class User {
         this.salary = salary;
         this.phone = phone;
         this.email = email;
+        this.number=number;
+
     }
 
     public int getTimejob() {
@@ -25,6 +31,14 @@ public class User {
 
     public void setTimejob(int timejob) {
         this.timejob = timejob;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String getNameperson() {

@@ -21,7 +21,7 @@ public class JDBCModel {
         StrictMode.setThreadPolicy(policy);
         Connection objConn = null;
         String sConnURL = null;
-        Objects objEntity = new Objects("192.168.1.19", "haxuansang123", "anhsang1233", "ViecLamDaNang", "1433");
+        Objects objEntity = new Objects("192.168.0.82", "haxuansang123", "anhsang1233", "ViecLamDaNang", "1433");
         try {
             Class.forName(objEntity.getsClass());
             sConnURL = "jdbc:jtds:sqlserver://"

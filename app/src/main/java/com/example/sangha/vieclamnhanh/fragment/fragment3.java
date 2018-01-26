@@ -2,6 +2,7 @@ package com.example.sangha.vieclamnhanh.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +17,9 @@ import com.example.sangha.vieclamnhanh.MainActivity;
 import com.example.sangha.vieclamnhanh.R;
 import com.example.sangha.vieclamnhanh.User;
 
-import java.net.URLEncoder;
+
 import java.sql.SQLException;
+
 
 /**
  * Created by SangHa on 1/16/2018.
@@ -26,10 +28,12 @@ import java.sql.SQLException;
 
 
 public class fragment3 extends android.support.v4.app.Fragment{
+
     Button btnSubmit;
     CheckBox cbFullTime,cbPartTime;
     EditText etCompany,etJob,etSalary,etDetails,etAddress,etPhone,etEmail;
     NumberPicker numberPicker;
+    static int numberPicked;
     public fragment3(){
 
     }
@@ -37,7 +41,8 @@ public class fragment3 extends android.support.v4.app.Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
 
-        View view=inflater.inflate(R.layout.fragment3,container,false);
+
+        final View view=inflater.inflate(R.layout.fragment3,container,false);
         numberPicker=(NumberPicker)view.findViewById(R.id.numberPicker);
         btnSubmit=(Button)view.findViewById(R.id.btnSubmit);
         cbFullTime=(CheckBox)view.findViewById(R.id.cbFullTime);
@@ -51,6 +56,13 @@ public class fragment3 extends android.support.v4.app.Fragment{
         etEmail=(EditText)view.findViewById(R.id.etEmail) ;
         numberPicker.setMinValue(1);
         numberPicker.setMaxValue(30);
+        numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+              numberPicked=i1;
+
+            }
+        });
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +80,7 @@ public class fragment3 extends android.support.v4.app.Fragment{
 
 
 
-                    User infor = new User(setTime(cbFullTime,cbPartTime),etCompany.getText().toString(),etJob.getText().toString(),etDetails.getText().toString(),etAddress.getText().toString(),etSalary.getText().toString(),etPhone.getText().toString(),etEmail.getText().toString());
+                    User infor = new User(setTime(cbFullTime,cbPartTime),etCompany.getText().toString(),etJob.getText().toString(),etDetails.getText().toString(),etAddress.getText().toString(),etSalary.getText().toString(),etPhone.getText().toString(),etEmail.getText().toString(),numberPicked);
                     UserModel test = new UserModel();
 
                     Toast.makeText(view.getContext(),"Bạn sẽ được duyệt và đăng ",Toast.LENGTH_LONG).show();

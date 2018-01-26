@@ -1,12 +1,10 @@
 package com.example.sangha.vieclamnhanh;
 
-import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.sangha.vieclamnhanh.fragment.fragment1;
-import com.example.sangha.vieclamnhanh.fragment.fragment2;
 import com.example.sangha.vieclamnhanh.fragment.fragment3;
 
 /**
@@ -28,11 +26,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                     frag= new fragment1();
                     break;
                 case 1:
-                    frag = new fragment2();
-                    break;
-                case 2:
                     frag = new fragment3();
-                    break;
+                       break;
+
 
 
             }
@@ -42,7 +38,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount()
     {
-        return 3;
+        return 2;
 
     }
     @Override
@@ -55,11 +51,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                 title="Xem";
                 break;
             case 1:
-                title="Tìm";
-                break;
-            case 2:
                 title="Đăng";
                 break;
+
 
         }
         return title;
