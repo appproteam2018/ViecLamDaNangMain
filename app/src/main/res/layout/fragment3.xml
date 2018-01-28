@@ -26,7 +26,6 @@
                 android:id="@+id/imageView1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
@@ -36,11 +35,6 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/checkBox"
-                android:layout_alignBottom="@+id/checkBox"
-
-                android:layout_toLeftOf="@+id/checkBox"
-                android:layout_toStartOf="@+id/checkBox"
                 android:layout_weight="1"
                 android:text="Thời Gian"
                 android:textColor="#fc8747"
@@ -52,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-
                 android:layout_weight="1"
                 android:text="PartTime" />
 
@@ -60,7 +53,7 @@
                 android:id="@+id/cbFullTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/checkBox"
+
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
 
@@ -122,9 +115,7 @@
             android:id="@+id/linear3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_below="@id/etCompany"
-
             android:layout_marginTop="35dp"
             android:weightSum="2">
 

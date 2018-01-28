@@ -33,7 +33,7 @@ public class fragment3 extends android.support.v4.app.Fragment{
     CheckBox cbFullTime,cbPartTime;
     EditText etCompany,etJob,etSalary,etDetails,etAddress,etPhone,etEmail;
     NumberPicker numberPicker;
-    static int numberPicked;
+    static int numberPicked=1;
     public fragment3(){
 
     }
@@ -63,6 +63,7 @@ public class fragment3 extends android.support.v4.app.Fragment{
 
             }
         });
+
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="20dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp">
+    <LinearLayout
+        android:id="@+id/linearFind1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/time"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thời Gian"
+            android:textColor="#fc8747"
+            android:textSize="16sp"
+            />
+
+        <CheckBox
+            android:id="@+id/cbPartTimeFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_weight="1"
+            android:text="PartTime" />
+
+        <CheckBox
+            android:id="@+id/cbFullTimeFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="FullTime" />
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/linearFind2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearFind1"
+        android:layout_marginTop="35dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="15dp"
+
+            android:src="@drawable/job" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@id/imageView3"
+
+            android:text="Công Việc"
+            android:textColor="#fc8747"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+    <Spinner
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/linearFind2"
+        android:id="@+id/spinnerFind"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        />
+    <RelativeLayout
+        android:id="@+id/linearFind3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinnerFind"
+        android:layout_marginTop="35dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/maps" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@id/imageView5"
+            android:layout_weight="1"
+            android:text="Đà Nẵng"
+            android:textColor="#fc8747"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+    <Spinner
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/linearFind3"
+        android:id="@+id/spinnerFindAddress"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background"
+            android:text="Tìm"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/spinnerFindAddress"/>
+
+
+
+</RelativeLayout>
