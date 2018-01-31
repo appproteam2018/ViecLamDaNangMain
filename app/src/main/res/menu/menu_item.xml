@@ -8,6 +8,5 @@
         android:title="Tìm kiếm..."
         app:showAsAction="always"
 
-
         />
 </menu>
