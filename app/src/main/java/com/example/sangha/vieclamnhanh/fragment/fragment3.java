@@ -2,14 +2,17 @@ package com.example.sangha.vieclamnhanh.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.sangha.vieclamnhanh.JDBC.UserModel;
@@ -34,15 +37,17 @@ public class fragment3 extends android.support.v4.app.Fragment{
     EditText etCompany,etJob,etSalary,etDetails,etAddress,etPhone,etEmail;
     NumberPicker numberPicker;
     static int numberPicked=1;
-    public fragment3(){
-
-    }
+    Spinner spinnerJob;
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
 
-
+        String[] namesOfJob = getResources().getStringArray(R.array.namesofjob);
         final View view=inflater.inflate(R.layout.fragment3,container,false);
+        spinnerJob=(Spinner)view.findViewById(R.id.spinnerJob);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(view.getContext(),R.layout.spinner_item,namesOfJob);
+        spinnerJob.setAdapter(arrayAdapter);
         numberPicker=(NumberPicker)view.findViewById(R.id.numberPicker);
         btnSubmit=(Button)view.findViewById(R.id.btnSubmit);
         cbFullTime=(CheckBox)view.findViewById(R.id.cbFullTime);
@@ -134,15 +139,14 @@ public class fragment3 extends android.support.v4.app.Fragment{
     }
     private int setTime(CheckBox cbFullTime,CheckBox cbPartTime)
     {
-        if (cbFullTime.isChecked()==false && cbPartTime.isChecked()==false)
-            return 0;
+
         if (cbFullTime.isChecked()==false && cbPartTime.isChecked()==true)
             return 1;
         if (cbFullTime.isChecked()==true &&  cbPartTime.isChecked()==false)
             return 2;
         if (cbFullTime.isChecked()==true &&  cbPartTime.isChecked()==true)
             return 3;
-        return -1;
+        return 3;
     }
 
 

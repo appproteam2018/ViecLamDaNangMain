@@ -26,7 +26,7 @@ import java.util.zip.Inflater;
  */
 
 public class BottomSheetLayout extends BottomSheetDialogFragment {
-    Spinner spinner,spinnerDistrict;
+    Spinner spinner;
 
     @Nullable
     @Override
@@ -36,13 +36,12 @@ public class BottomSheetLayout extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.bottomsheet, container, false);
         spinner=(Spinner)view.findViewById(R.id.spinnerFind);
         btnFind=(Button)view.findViewById(R.id.btnFind);
-        spinnerDistrict =(Spinner)view.findViewById(R.id.spinnerFindAddress);
-        String[] arrayJob={"Phục Vụ","Bảo Vệ","Gia Sư","Công Nghệ Thông Tin"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(view.getContext(),android.R.layout.simple_spinner_dropdown_item,arrayJob);
-        String[] arrayDistrict={"Hải Châu","Thanh Khê","Sơn Trà","Ngũ Hành Sơn","Liên Chiểu","Hòa Vang","Cẩm Lệ","Hoàng Sa"};
-        ArrayAdapter<String> adapterDistrict= new ArrayAdapter<String>(view.getContext(),android.R.layout.simple_spinner_dropdown_item,arrayDistrict);
+
+        String[] arrayJob=getResources().getStringArray(R.array.namesofjob);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(view.getContext(),R.layout.spinner_item,arrayJob);
+
         spinner.setAdapter(adapter);
-        spinnerDistrict.setAdapter(adapterDistrict);
+
         btnFind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

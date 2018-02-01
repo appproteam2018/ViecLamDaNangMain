@@ -2,4 +2,48 @@
     <string name="app_name">Việc Làm Đà Nẵng</string>
     <string name="title_activity_fragment1">fragment1</string>
     <string name="title_activity_loading">LoadingActivity</string>
+    <string-array name="namesofjob">
+        <item>---Nhấn Chọn Ngành Nghề---</item>
+        <item>Bán thời gian/ Thời Vụ </item>
+        <item>Phục vụ/Tạp vụ/Giúp việc </item>
+        <item>Lao động phổ thông </item>
+        <item>Bán hàng </item>
+        <item>PG/PB/Lễ tân </item>
+        <item>Báo chí/Biên tập viên </item>
+        <item>Bảo vệ/Vệ sĩ/An ninh </item>
+        <item>Sinh viên/Mới tốt nghiệp/Thực tập </item>
+        <item>Biên dịch/Phiên dịch </item>
+        <item>Bưu chính viễn thông </item>
+        <item>Chăm sóc khách hàng </item>
+        <item>Cơ khí/Kĩ thuật ứng dụng </item>
+        <item>Công nghệ thông tin </item>
+        <item>Dầu khí/Địa chất </item>
+        <item>Dệt may </item>
+        <item>Du lịch/Nhà hàng/Khách sạn </item>
+        <item>Dược/Hóa chất/Sinh hóa </item>
+        <item>Giải trí/Vui chơi </item>
+        <item>Giáo dục/Đào tạo/Thư viện </item>
+        <item>Giao thông/Vận tải/Thủy lợi/Cầu đường </item>
+        <item>Hành chính/Thư ký/Trợ lý </item>
+        <item>Kho vận/Vật tư/Thu mua </item>
+        <item>Khu chế xuất/Khu công nghiệp </item>
+        <item>Kiến trúc/Nội thất </item>
+        <item>Kinh doanh </item>
+        <item>Làm đẹp/Thể lực/Spa </item>
+        <item>Luật/Pháp lý </item>
+        <item>Mỹ phẩm/Thời trang/Trang sức </item>
+        <item>Ngân hàng/Chứng khoán/Đầu tư </item>
+        <item>Nghệ thuật/Điện ảnh </item>
+        <item>Ngoại ngữ </item>
+        <item>Nhân sự </item>
+        <item>Quản lý điều hành </item>
+        <item>Quảng cáo/Marketing/PR </item>
+        <item>Tài chính/Kế toán/Kiểm toán </item>
+        <item>Tài xế/Lái xe/Giao nhận </item>
+        <item>Thiết kế/Mỹ thuật </item>
+        <item>Thực phẩm/DV ăn uống </item>
+        <item>Xây dựng </item>
+        <item>Khác</item>
+
+    </string-array>
 </resources>
