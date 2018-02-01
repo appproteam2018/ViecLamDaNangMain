@@ -1,7 +1,9 @@
 package com.example.sangha.vieclamnhanh;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
@@ -29,10 +31,11 @@ public class MainActivity  extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         toolbar=(Toolbar)findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setIcon(R.mipmap.ic_toolbar);
-        toolbar.setTextAlignment(0);
+
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         materialSearchView=(MaterialSearchView)findViewById(R.id.searchView);
         addControl();

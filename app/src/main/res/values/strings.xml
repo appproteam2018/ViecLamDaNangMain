@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Việc Làm Đà Nẵng</string>
     <string name="title_activity_fragment1">fragment1</string>
+    <string name="title_activity_loading">LoadingActivity</string>
 </resources>
